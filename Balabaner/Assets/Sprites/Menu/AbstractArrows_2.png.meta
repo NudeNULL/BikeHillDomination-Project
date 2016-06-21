@@ -1,0 +1,628 @@
+fileFormatVersion: 2
+guid: ad2a112470f72e644ab3c9776045ad45
+timeCreated: 1459171968
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: AbstractArrows_2_0
+    21300002: AbstractArrows_2_1
+    21300004: AbstractArrows_2_2
+    21300006: AbstractArrows_2_3
+    21300008: AbstractArrows_2_4
+    21300010: AbstractArrows_2_6
+    21300012: AbstractArrows_2_8
+    21300014: AbstractArrows_2_9
+    21300016: AbstractArrows_2_10
+    21300018: AbstractArrows_2_12
+    21300020: AbstractArrows_2_13
+    21300022: AbstractArrows_2_14
+    21300024: AbstractArrows_2_15
+    21300026: AbstractArrows_2_16
+    21300028: AbstractArrows_2_17
+    21300030: AbstractArrows_2_19
+    21300032: AbstractArrows_2_20
+    21300034: AbstractArrows_2_26
+    21300036: AbstractArrows_2_27
+    21300038: AbstractArrows_2_28
+    21300040: AbstractArrows_2_32
+    21300042: AbstractArrows_2_33
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: AbstractArrows_2_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 625
+        width: 491
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 186.5, y: 69.5}
+        - {x: 171.5, y: 69.5}
+        - {x: 170.5, y: 68.5}
+        - {x: 164.5, y: 55.5}
+        - {x: -230.5, y: 55.5}
+        - {x: -242.5, y: 54.5}
+        - {x: -245.5, y: 52.5}
+        - {x: -245.5, y: 34.5}
+        - {x: -223.5, y: 5.5}
+        - {x: -223.5, y: -7.5}
+        - {x: -231.5, y: -16.5}
+        - {x: -245.5, y: -38.5}
+        - {x: -245.5, y: -52.5}
+        - {x: -242.5, y: -54.5}
+        - {x: 170.5, y: -54.5}
+        - {x: 170.5, y: -69.5}
+        - {x: 186.5, y: -69.5}
+        - {x: 245.5, y: -4.5}
+        - {x: 245.5, y: 5.5}
+        - {x: 210.5, y: 42.5}
+    - name: AbstractArrows_2_1
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 633
+        width: 222
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 57, y: 65.5}
+        - {x: -111, y: 65.5}
+        - {x: -111, y: -65.5}
+        - {x: 44, y: -65.5}
+        - {x: 111, y: -11.5}
+        - {x: 111, y: 7.5}
+        - {x: 107, y: 17.5}
+    - name: AbstractArrows_2_2
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 573
+        width: 273
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 136.5, y: -97.5}
+        - {x: 136.5, y: 57.5}
+        - {x: 126.5, y: 72.5}
+        - {x: 99.5, y: 84.5}
+        - {x: -59.5, y: 84.5}
+        - {x: -59.5, y: 97.5}
+        - {x: -81.5, y: 97.5}
+        - {x: -136.5, y: 11.5}
+        - {x: -136.5, y: -5.5}
+        - {x: -81.5, y: -89.5}
+        - {x: -74.5, y: -97.5}
+        - {x: -62.5, y: -97.5}
+        - {x: -59.5, y: -96.5}
+        - {x: -57.5, y: -78.5}
+        - {x: 96.5, y: -81.5}
+        - {x: 129.5, y: -97.5}
+    - name: AbstractArrows_2_3
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 418
+        width: 173
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 71.5, y: 121}
+        - {x: 72.5, y: 171}
+        - {x: 71.5, y: 173}
+        - {x: 41.5, y: 173}
+        - {x: 13.5, y: 164}
+        - {x: -36.5, y: 173}
+        - {x: -68.5, y: 173}
+        - {x: -68.5, y: -107}
+        - {x: -85.5, y: -109}
+        - {x: -86.5, y: -110}
+        - {x: -86.5, y: -122}
+        - {x: -69.5, y: -135}
+        - {x: -40.5, y: -152}
+        - {x: -8.5, y: -173}
+        - {x: 16.5, y: -173}
+        - {x: 86.5, y: -123}
+        - {x: 86.5, y: -110}
+        - {x: 71.5, y: -102}
+    - name: AbstractArrows_2_4
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 461
+        width: 133
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: -44.5}
+        - {x: -66.5, y: -79.5}
+        - {x: -66.5, y: -151.5}
+        - {x: 66.5, y: -151.5}
+        - {x: 66.5, y: -72.5}
+        - {x: 14.5, y: -44.5}
+      - - {x: -27.5, y: 52.5}
+        - {x: -66.5, y: 22.5}
+        - {x: -66.5, y: -56.5}
+        - {x: 66.5, y: -56.5}
+        - {x: 66.5, y: 26.5}
+        - {x: 13.5, y: 52.5}
+      - - {x: -25.5, y: 151.5}
+        - {x: -66.5, y: 118.5}
+        - {x: -66.5, y: 39.5}
+        - {x: 66.5, y: 39.5}
+        - {x: 66.5, y: 129.5}
+        - {x: 13.5, y: 151.5}
+    - name: AbstractArrows_2_6
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 567
+        width: 144
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 11.5}
+        - {x: -66, y: -25.5}
+        - {x: -66, y: -71.5}
+        - {x: -56, y: -81.5}
+        - {x: -34, y: -100.5}
+        - {x: 34, y: -100.5}
+        - {x: 50, y: -98.5}
+        - {x: 72, y: -61.5}
+        - {x: 72, y: -5.5}
+        - {x: 64, y: 11.5}
+      - - {x: -38, y: 100.5}
+        - {x: -72, y: 89.5}
+        - {x: -72, y: -2.5}
+        - {x: -67, y: -13.5}
+        - {x: 44, y: -13.5}
+        - {x: 64, y: -1.5}
+        - {x: 64, y: 81.5}
+        - {x: 46, y: 100.5}
+    - name: AbstractArrows_2_8
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 624
+        width: 174
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -76, y: 72}
+        - {x: -87, y: 70}
+        - {x: -87, y: -72}
+        - {x: -34, y: -72}
+        - {x: 87, y: 12}
+        - {x: 87, y: 38}
+        - {x: 46, y: 72}
+    - name: AbstractArrows_2_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 506
+        width: 367
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 183.5, y: 25}
+        - {x: 183.5, y: 58}
+        - {x: 113.5, y: 58}
+        - {x: 95.5, y: 55}
+        - {x: -119.5, y: 54}
+        - {x: -128.5, y: 58}
+        - {x: -146.5, y: 58}
+        - {x: -183.5, y: 6}
+        - {x: -183.5, y: -16}
+        - {x: -141.5, y: -58}
+        - {x: -111.5, y: -58}
+        - {x: -57.5, y: -45}
+        - {x: 90.5, y: -58}
+        - {x: 183.5, y: -58}
+        - {x: 183.5, y: -45}
+        - {x: 181.5, y: -39}
+    - name: AbstractArrows_2_10
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 423
+        width: 314
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39, y: 70.5}
+        - {x: 16, y: 61.5}
+        - {x: -114, y: 55.5}
+        - {x: -141, y: 68.5}
+        - {x: -157, y: 66.5}
+        - {x: -157, y: -38.5}
+        - {x: -132, y: -58.5}
+        - {x: 41, y: -54.5}
+        - {x: 40, y: -70.5}
+        - {x: 63, y: -70.5}
+        - {x: 151, y: -31.5}
+        - {x: 157, y: -16.5}
+        - {x: 157, y: 12.5}
+        - {x: 67, y: 70.5}
+    - name: AbstractArrows_2_12
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 471
+        width: 190
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -95, y: 54.5}
+        - {x: -95, y: -29.5}
+        - {x: -21, y: -54.5}
+        - {x: 83, y: -54.5}
+        - {x: 95, y: -27.5}
+        - {x: 95, y: 51.5}
+        - {x: 93, y: 54.5}
+    - name: AbstractArrows_2_13
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 293
+        width: 410
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 123, y: 31.5}
+        - {x: 119, y: 25.5}
+        - {x: 1, y: 81.5}
+        - {x: -205, y: 81.5}
+        - {x: -205, y: 8.5}
+        - {x: -54, y: -56.5}
+        - {x: -43, y: -64.5}
+        - {x: 94, y: -81.5}
+        - {x: 144, y: -81.5}
+        - {x: 205, y: -36.5}
+        - {x: 205, y: -15.5}
+        - {x: 131, y: 32.5}
+    - name: AbstractArrows_2_14
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 305
+        width: 239
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 69.5, y: 55}
+        - {x: -22.5, y: 55}
+        - {x: -119.5, y: 30}
+        - {x: -119.5, y: -27}
+        - {x: -111.5, y: -55}
+        - {x: 80.5, y: -55}
+        - {x: 119.5, y: -30}
+        - {x: 119.5, y: -7}
+    - name: AbstractArrows_2_15
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 276
+        width: 299
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 149.5, y: 40}
+        - {x: 128.5, y: 64}
+        - {x: 17.5, y: 70}
+        - {x: -70.5, y: 70}
+        - {x: -149.5, y: 13}
+        - {x: -149.5, y: -8}
+        - {x: -66.5, y: -70}
+        - {x: -47.5, y: -70}
+        - {x: -38.5, y: -55}
+        - {x: 116.5, y: -68}
+        - {x: 149.5, y: -66}
+    - name: AbstractArrows_2_16
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 267
+        width: 152
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -65, y: 25.5}
+        - {x: -73, y: 5.5}
+        - {x: -74, y: -2.5}
+        - {x: -74, y: -32.5}
+        - {x: -64, y: -49.5}
+        - {x: -47, y: -71.5}
+        - {x: -4, y: -71.5}
+        - {x: -3, y: -69.5}
+        - {x: -3, y: 12.5}
+        - {x: -7, y: 25.5}
+      - - {x: 13, y: 14.5}
+        - {x: -1, y: -8.5}
+        - {x: -1, y: -70.5}
+        - {x: 0, y: -71.5}
+        - {x: 58, y: -71.5}
+        - {x: 76, y: -38.5}
+        - {x: 76, y: 14.5}
+      - - {x: -32, y: 71.5}
+        - {x: -44, y: 53.5}
+        - {x: -46, y: 44.5}
+        - {x: -46, y: 32.5}
+        - {x: -45, y: 24.5}
+        - {x: -13, y: 12.5}
+        - {x: 57, y: 12.5}
+        - {x: 57, y: 48.5}
+        - {x: 39, y: 71.5}
+    - name: AbstractArrows_2_17
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 166
+        width: 116
+        height: 267
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 133.5}
+        - {x: -58, y: 7.5}
+        - {x: -58, y: -54.5}
+        - {x: -20, y: -127.5}
+        - {x: -7, y: -133.5}
+        - {x: 12, y: -133.5}
+        - {x: 58, y: -66.5}
+        - {x: 58, y: 40.5}
+        - {x: 29, y: 133.5}
+    - name: AbstractArrows_2_19
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 281
+        width: 205
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 66.5, y: 52.5}
+        - {x: 48.5, y: 44.5}
+        - {x: -88.5, y: 1.5}
+        - {x: -88.5, y: -29.5}
+        - {x: -50.5, y: -52.5}
+        - {x: 66.5, y: -52.5}
+        - {x: 102.5, y: -4.5}
+        - {x: 102.5, y: 48.5}
+        - {x: 90.5, y: 52.5}
+      - - {x: -102.5, y: 31.5}
+        - {x: -102.5, y: -5.5}
+        - {x: -97.5, y: -7.5}
+        - {x: -86.5, y: -7.5}
+        - {x: -85.5, y: -6.5}
+        - {x: -85.5, y: 22.5}
+        - {x: -93.5, y: 31.5}
+      - - {x: -102.5, y: 52.5}
+        - {x: -102.5, y: 41.5}
+        - {x: -99.5, y: 40.5}
+        - {x: -95.5, y: 40.5}
+        - {x: -93.5, y: 45.5}
+        - {x: -93.5, y: 50.5}
+        - {x: -94.5, y: 52.5}
+    - name: AbstractArrows_2_20
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 270
+        width: 124
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 62, y: 0}
+        - {x: 62, y: 64}
+        - {x: 35, y: 72}
+        - {x: -48, y: 72}
+        - {x: -62, y: 53}
+        - {x: -62, y: -46}
+        - {x: -30, y: -72}
+        - {x: 21, y: -72}
+        - {x: 51, y: -61}
+        - {x: 32, y: -24}
+        - {x: 3, y: -9}
+        - {x: 59, y: -1}
+    - name: AbstractArrows_2_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 116
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: 143}
+        - {x: -18, y: 143}
+        - {x: -58, y: 89}
+        - {x: -58, y: -133}
+        - {x: -33, y: -143}
+        - {x: 32, y: -143}
+        - {x: 35, y: -135}
+        - {x: 58, y: 38}
+        - {x: 58, y: 86}
+    - name: AbstractArrows_2_27
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 122
+        width: 115
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14.5, y: 76}
+        - {x: -17.5, y: 58}
+        - {x: -57.5, y: 21}
+        - {x: -57.5, y: -8}
+        - {x: -40.5, y: -37}
+        - {x: 7.5, y: -76}
+        - {x: 57.5, y: -76}
+        - {x: 57.5, y: 69}
+        - {x: 48.5, y: 76}
+    - name: AbstractArrows_2_28
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 70
+        width: 237
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -71.5, y: 97}
+        - {x: -118.5, y: 20}
+        - {x: -118.5, y: -22}
+        - {x: -67.5, y: -97}
+        - {x: -45.5, y: -97}
+        - {x: 25.5, y: -76}
+        - {x: 25.5, y: 91}
+        - {x: -9.5, y: 97}
+      - - {x: 69.5, y: 79}
+        - {x: 69.5, y: -75}
+        - {x: 73.5, y: -77}
+        - {x: 96.5, y: -77}
+        - {x: 99.5, y: -74}
+        - {x: 99.5, y: 78}
+        - {x: 94.5, y: 79}
+      - - {x: 25.5, y: 79}
+        - {x: 25.5, y: -75}
+        - {x: 29.5, y: -76}
+        - {x: 61.5, y: -76}
+        - {x: 62.5, y: -64}
+        - {x: 62.5, y: 75}
+        - {x: 59.5, y: 79}
+      - - {x: 106.5, y: 73}
+        - {x: 103.5, y: 71}
+        - {x: 103.5, y: -71}
+        - {x: 118.5, y: -71}
+        - {x: 118.5, y: 73}
+    - name: AbstractArrows_2_32
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 122
+        width: 157
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31.5, y: -2.5}
+        - {x: 9.5, y: 57.5}
+        - {x: -66.5, y: 57.5}
+        - {x: -78.5, y: 37.5}
+        - {x: -78.5, y: -28.5}
+        - {x: -5.5, y: -57.5}
+        - {x: 68.5, y: -57.5}
+        - {x: 78.5, y: -45.5}
+        - {x: 78.5, y: -20.5}
+        - {x: 47.5, y: 1.5}
+    - name: AbstractArrows_2_33
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 110
+        width: 250
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 111, y: 55.5}
+        - {x: -81, y: 55.5}
+        - {x: -125, y: 47.5}
+        - {x: -125, y: -8.5}
+        - {x: -117, y: -15.5}
+        - {x: 47, y: -55.5}
+        - {x: 81, y: -55.5}
+        - {x: 118, y: -23.5}
+        - {x: 125, y: -7.5}
+        - {x: 125, y: 24.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
