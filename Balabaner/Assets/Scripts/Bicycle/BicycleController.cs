@@ -26,6 +26,7 @@ public class BicycleController : MonoBehaviour
     public float[] gearsSpeed;
     public float[] gearsForce;
     public float gearChangeOffset;
+    public AudioManager audioManager;
 
     // Maximum angular velocity on doing flips
     [Range(0, 359)]
@@ -163,17 +164,22 @@ public class BicycleController : MonoBehaviour
 
     void ProcessGearSystem()
     {
-        if (-rearWheelJoint.jointSpeed > 0f && rearWheelGrounded && (-rearWheelJoint.jointSpeed < gearsSpeed[currentGear - 1] || -rearWheelJoint.jointSpeed > gearsSpeed[currentGear]))
+        if (-rearWheelJoint.jointSpeed > 0f && rearWheelGrounded && (-rearWheelJoint.jointSpeed < (gearsSpeed[currentGear - 1] - gearChangeOffset) || -rearWheelJoint.jointSpeed > gearsSpeed[currentGear]))
         {
             if (-rearWheelJoint.jointSpeed < gearsSpeed[gearsSpeed.Length - 1])
             {
                 for (int i = 0; i < gearsSpeed.Length - 1; i++)
                 {
-                    if (-rearWheelJoint.jointSpeed < gearsSpeed[i] - gearChangeOffset)
+                    if (-rearWheelJoint.jointSpeed < gearsSpeed[i])
                     {
                         motorForce = gearsForce[i];
                         motorSpeed = gearsSpeed[i];
                         currentGear = i;
+
+                        //if (!audioManager.gearChangeSound.isPlaying)
+                        //{
+                        //    audioManager.gearChangeSound.Play();
+                        //}
                         break;
                     }
                 }

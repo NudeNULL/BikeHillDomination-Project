@@ -55,6 +55,8 @@ public class LevelManager : MonoBehaviour
 
     public bool isCrashing;
 
+    public AudioManager audioManager;
+
     // Use this for initialization
     void Start()
     {
@@ -167,6 +169,9 @@ public class LevelManager : MonoBehaviour
             frontWheel.suspension = tempSuspension;
             frontWheel.breakForce = Constants.UNBREAKABLE_FORCE;
         }
+
+        // Change pitch so slow motion sounds real
+        audioManager.SetSlowMotionPitch();
     }
 
     public void Restart()

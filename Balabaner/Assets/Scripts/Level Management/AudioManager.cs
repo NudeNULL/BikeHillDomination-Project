@@ -23,6 +23,9 @@ public class AudioManager : MonoBehaviour
     // Used to count the time before repetition
     float timer = 0f;
 
+    // Sound pitch subtracted number
+    public float substractedPitch;
+
     // Use this for initialization
     void Start()
     {
@@ -70,6 +73,16 @@ public class AudioManager : MonoBehaviour
             //        bicycleChainFullSpeedSound.Play();
             //    }
             //}
+        }
+    }
+
+    public void SetSlowMotionPitch()
+    {
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+
+        foreach (AudioSource audioSource in audioSources)
+        {
+            audioSource.pitch -= substractedPitch;
         }
     }
 }
