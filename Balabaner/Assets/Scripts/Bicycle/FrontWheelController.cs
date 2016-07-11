@@ -91,11 +91,7 @@ public class FrontWheelController : MonoBehaviour
     {
         if (col.gameObject.tag == groundTag)
         {
-            if (tireParticle.isPlaying)
-            {
-                tireParticle.Stop();
-            }
-
+            tireParticle.Stop();
             bicycleController.frontWheelGrounded = false;
         }
     }

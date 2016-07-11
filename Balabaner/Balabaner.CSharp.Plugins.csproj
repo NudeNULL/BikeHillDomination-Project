@@ -58,12 +58,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -72,6 +66,9 @@
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Common">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="2D Sky FREE">
+      <HintPath>Assets\2D Sky FREE\Demo\Scripts\2D Sky FREE.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +123,8 @@
     <Compile Include="Assets\Standard Assets\Utility\WaypointProgressTracker.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\2D Sky FREE\Demo\Scripts\Note.txt" />
+    <None Include="Assets\2D Sky FREE\Readme.txt" />
     <None Include="Assets\Ferr\2D\Scripts\poly2tri.cs\AUTHORS.txt" />
     <None Include="Assets\Ferr\2D\Scripts\poly2tri.cs\LICENSE.txt" />
     <None Include="Assets\Ferr\2DTerrain\Shaders\Ferr2DTCommon.cginc" />

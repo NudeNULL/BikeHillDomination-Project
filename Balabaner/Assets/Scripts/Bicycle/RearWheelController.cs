@@ -92,11 +92,7 @@ public class RearWheelController : MonoBehaviour
     {
         if (col.gameObject.tag == groundTag)
         {
-            if (tireParticle.isPlaying)
-            {
-                tireParticle.Stop();
-            }
-
+            tireParticle.Stop();
             bicycleController.rearWheelGrounded = false;
         }
     }

@@ -23,7 +23,6 @@ public class CameraFollow : MonoBehaviour
         transform.position = new Vector3(followedObject.transform.position.x + bodyRigidbody.velocity.magnitude / xOffset, followedObject.transform.position.y + yOffset, Mathf.Lerp(transform.position.z, zOffset - bodyRigidbody.velocity.magnitude, Time.fixedDeltaTime * distanceFollowSpeed));
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         cameraDistance = Mathf.Lerp(transform.position.z, zOffset - bodyRigidbody.velocity.magnitude, Time.fixedDeltaTime * distanceFollowSpeed);

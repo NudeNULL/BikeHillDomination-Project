@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: 5d32303e3fa301e4b8eb73db354d9501
+timeCreated: 1467889909
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Stones_2_0
+    21300002: Stones_2_1
+    21300004: Stones_2_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 40
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Stones_2_0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 401
+        width: 382
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 105, y: -167.5}
+        - {x: 126, y: -160.5}
+        - {x: 147, y: -146.5}
+        - {x: 191, y: -113.5}
+        - {x: 191, y: -81.5}
+        - {x: 187, y: -62.5}
+        - {x: 165, y: -47.5}
+        - {x: 155, y: -49.5}
+        - {x: 126, y: -56.5}
+        - {x: 131, y: -39.5}
+        - {x: 124, y: -14.5}
+        - {x: 116, y: 4.5}
+        - {x: 89, y: 18.5}
+        - {x: 40, y: 80.5}
+        - {x: -3, y: 99.5}
+        - {x: -41, y: 92.5}
+        - {x: -48, y: 109.5}
+        - {x: -65, y: 139.5}
+        - {x: -101, y: 183.5}
+        - {x: -157, y: 183.5}
+        - {x: -191, y: 159.5}
+        - {x: -191, y: 127.5}
+        - {x: -165, y: 62.5}
+        - {x: -182, y: 31.5}
+        - {x: -168, y: -12.5}
+        - {x: -191, y: -83.5}
+        - {x: -191, y: -96.5}
+        - {x: -185, y: -104.5}
+        - {x: -174, y: -116.5}
+        - {x: -162, y: -163.5}
+        - {x: -135, y: -174.5}
+        - {x: -75, y: -183.5}
+        - {x: -13, y: -183.5}
+        - {x: 60, y: -175.5}
+        - {x: 85, y: -171.5}
+    - name: Stones_2_1
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 372
+        width: 366
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 171, y: -78}
+        - {x: 168, y: -77}
+        - {x: 166, y: -77}
+        - {x: 167, y: -77}
+        - {x: 172, y: -75}
+        - {x: 174, y: -56}
+        - {x: 151, y: 2}
+        - {x: 168, y: 35}
+        - {x: 179, y: 65}
+        - {x: 171, y: 92}
+        - {x: 183, y: 132}
+        - {x: 183, y: 166}
+        - {x: 149, y: 196}
+        - {x: 113, y: 196}
+        - {x: 83, y: 189}
+        - {x: 33, y: 128}
+        - {x: 15, y: 132}
+        - {x: -37, y: 114}
+        - {x: -60, y: 70}
+        - {x: -97, y: 17}
+        - {x: -99, y: 11}
+        - {x: -103, y: 3}
+        - {x: -113, y: -3}
+        - {x: -159, y: 3}
+        - {x: -183, y: -35}
+        - {x: -183, y: -80}
+        - {x: -61, y: -153}
+        - {x: -35, y: -166}
+        - {x: -9, y: -170}
+        - {x: 30, y: -174}
+        - {x: 55, y: -196}
+        - {x: 129, y: -196}
+        - {x: 148, y: -189}
+        - {x: 168, y: -170}
+        - {x: 177, y: -135}
+    - name: Stones_2_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 406
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 203, y: -147}
+        - {x: 203, y: -121}
+        - {x: 196, y: -103}
+        - {x: 171, y: -45}
+        - {x: 150, y: -35}
+        - {x: 169, y: -13}
+        - {x: 190, y: 27}
+        - {x: 188, y: 68}
+        - {x: 157, y: 77}
+        - {x: 165, y: 102}
+        - {x: 162, y: 150}
+        - {x: 157, y: 164}
+        - {x: 124, y: 176}
+        - {x: 89, y: 176}
+        - {x: 78, y: 166}
+        - {x: 34, y: 96}
+        - {x: 9, y: 97}
+        - {x: -30, y: 94}
+        - {x: -48, y: 83}
+        - {x: -96, y: 19}
+        - {x: -85, y: -14}
+        - {x: -123, y: -59}
+        - {x: -142, y: -89}
+        - {x: -166, y: -87}
+        - {x: -194, y: -100}
+        - {x: -203, y: -139}
+        - {x: -203, y: -156}
+        - {x: -201, y: -159}
+        - {x: -170, y: -169}
+        - {x: -109, y: -172}
+        - {x: -40, y: -176}
+        - {x: 93, y: -176}
+        - {x: 114, y: -174}
+        - {x: 143, y: -149}
+        - {x: 170, y: -157}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

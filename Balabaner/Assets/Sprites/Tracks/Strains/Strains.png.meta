@@ -1,0 +1,374 @@
+fileFormatVersion: 2
+guid: e03f2a32889864e44a52c65054601e4f
+timeCreated: 1467888834
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Strains_0
+    21300002: Strains_1
+    21300004: Strains_2
+    21300006: Strains_3
+    21300008: Strains_4
+    21300010: Strains_6
+    21300012: Strains_8
+    21300014: Strains_9
+    21300016: Strains_10
+    21300018: Strains_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 25
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Strains_0
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 452
+        width: 204
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -61, y: 74}
+        - {x: -102, y: -45}
+        - {x: -102, y: -62}
+        - {x: -89, y: -69}
+        - {x: -65, y: -70}
+        - {x: -10, y: -74}
+        - {x: 97, y: -74}
+        - {x: 102, y: -70}
+        - {x: 102, y: -15}
+        - {x: 88, y: 74}
+    - name: Strains_1
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 428
+        width: 251
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 87}
+        - {x: -66.5, y: 83}
+        - {x: -83.5, y: 69}
+        - {x: -125.5, y: -13}
+        - {x: -125.5, y: -71}
+        - {x: -108.5, y: -87}
+        - {x: 52.5, y: -87}
+        - {x: 125.5, y: -79}
+        - {x: 125.5, y: -6}
+        - {x: 43.5, y: 87}
+    - name: Strains_2
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 425
+        width: 267
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33.5, y: -125}
+        - {x: -32.5, y: -126}
+        - {x: -26.5, y: -126}
+        - {x: -25.5, y: -123}
+        - {x: -27.5, y: -120}
+        - {x: -29.5, y: -120}
+        - {x: -33.5, y: -122}
+      - - {x: 132.5, y: -47}
+        - {x: 52.5, y: 126}
+        - {x: 22.5, y: 126}
+        - {x: 0.5, y: 52}
+        - {x: -80.5, y: 108}
+        - {x: -97.5, y: 52}
+        - {x: -133.5, y: -40}
+        - {x: -133.5, y: -86}
+        - {x: -122.5, y: -100}
+        - {x: -52.5, y: -126}
+        - {x: 76.5, y: -126}
+        - {x: 126.5, y: -115}
+        - {x: 133.5, y: -90}
+        - {x: 133.5, y: -48}
+    - name: Strains_3
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 407
+        width: 332
+        height: 286
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 74, y: 65}
+        - {x: 31, y: 125}
+        - {x: 8, y: 143}
+        - {x: -69, y: 143}
+        - {x: -166, y: -8}
+        - {x: -166, y: -57}
+        - {x: -162, y: -70}
+        - {x: -133, y: -71}
+        - {x: -121, y: -67}
+        - {x: -144, y: -75}
+        - {x: -158, y: -85}
+        - {x: -165, y: -97}
+        - {x: -166, y: -99}
+        - {x: -166, y: -116}
+        - {x: -70, y: -143}
+        - {x: 121, y: -143}
+        - {x: 166, y: -122}
+        - {x: 166, y: -68}
+        - {x: 155, y: -40}
+        - {x: 96, y: 74}
+        - {x: 79, y: 72}
+      - - {x: 148, y: -54}
+        - {x: 148, y: -58}
+        - {x: 157, y: -65}
+        - {x: 165, y: -65}
+        - {x: 166, y: -64}
+        - {x: 166, y: -56}
+        - {x: 156, y: -54}
+      - - {x: 126, y: -45}
+        - {x: 130, y: -46}
+        - {x: 133, y: -44}
+        - {x: 132, y: -41}
+        - {x: 127, y: -40}
+        - {x: 125, y: -42}
+    - name: Strains_4
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 414
+        width: 228
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 114, y: 43}
+        - {x: 80, y: 78}
+        - {x: 42, y: 80}
+        - {x: -7, y: 89}
+        - {x: -30, y: 113}
+        - {x: -65, y: 113}
+        - {x: -90, y: 103}
+        - {x: -114, y: 73}
+        - {x: -114, y: 9}
+        - {x: -99, y: -54}
+        - {x: -81, y: -102}
+        - {x: -63, y: -113}
+        - {x: 16, y: -113}
+        - {x: 63, y: -95}
+        - {x: 114, y: -55}
+    - name: Strains_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 29
+        width: 344
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 121, y: -3}
+        - {x: 126, y: 86}
+        - {x: 104, y: 87}
+        - {x: 95, y: 146}
+        - {x: 81, y: 146}
+        - {x: 60, y: 86}
+        - {x: 23, y: 85}
+        - {x: -54, y: 70}
+        - {x: -77, y: 38}
+        - {x: -97, y: -7}
+        - {x: -165, y: -55}
+        - {x: -172, y: -65}
+        - {x: -172, y: -90}
+        - {x: -137, y: -107}
+        - {x: -57, y: -123}
+        - {x: 17, y: -146}
+        - {x: 105, y: -146}
+        - {x: 146, y: -134}
+        - {x: 172, y: -106}
+        - {x: 172, y: -70}
+    - name: Strains_8
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 31
+        width: 271
+        height: 275
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 99.5, y: 101.5}
+        - {x: 80.5, y: 131.5}
+        - {x: 71.5, y: 137.5}
+        - {x: 37.5, y: 137.5}
+        - {x: -2.5, y: 21.5}
+        - {x: -9.5, y: 88.5}
+        - {x: -82.5, y: 137.5}
+        - {x: -99.5, y: 137.5}
+        - {x: -134.5, y: 97.5}
+        - {x: -135.5, y: 65.5}
+        - {x: -135.5, y: -64.5}
+        - {x: -66.5, y: -86.5}
+        - {x: -31.5, y: -109.5}
+        - {x: -27.5, y: -113.5}
+        - {x: 42.5, y: -137.5}
+        - {x: 109.5, y: -137.5}
+        - {x: 135.5, y: -116.5}
+        - {x: 135.5, y: 22.5}
+        - {x: 126.5, y: 50.5}
+      - - {x: 119.5, y: 53.5}
+        - {x: 122.5, y: 48.5}
+        - {x: 125.5, y: 49.5}
+        - {x: 125.5, y: 56.5}
+        - {x: 122.5, y: 60.5}
+        - {x: 119.5, y: 59.5}
+    - name: Strains_9
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 49
+        width: 310
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 155, y: -23}
+        - {x: 125, y: 78}
+        - {x: 102, y: 94}
+        - {x: 68, y: 102}
+        - {x: 47, y: 103}
+        - {x: -36, y: 103}
+        - {x: -62, y: 99}
+        - {x: -84, y: 83}
+        - {x: -135, y: -15}
+        - {x: -135, y: -67}
+        - {x: -41, y: -87}
+        - {x: -16, y: -103}
+        - {x: 13, y: -103}
+        - {x: 71, y: -86}
+        - {x: 130, y: -59}
+        - {x: 155, y: -41}
+      - - {x: -155, y: -30}
+        - {x: -155, y: -35}
+        - {x: -153, y: -36}
+        - {x: -150, y: -36}
+        - {x: -149, y: -34}
+        - {x: -149, y: -32}
+        - {x: -152, y: -30}
+    - name: Strains_10
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 57
+        width: 302
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -99, y: 121.5}
+        - {x: -125, y: 90.5}
+        - {x: -121, y: 64.5}
+        - {x: -151, y: 56.5}
+        - {x: -151, y: 20.5}
+        - {x: -118, y: -51.5}
+        - {x: -114, y: -59.5}
+        - {x: -80, y: -105.5}
+        - {x: -64, y: -121.5}
+        - {x: 60, y: -121.5}
+        - {x: 151, y: -88.5}
+        - {x: 151, y: -7.5}
+        - {x: 133, y: 18.5}
+        - {x: 19, y: 107.5}
+        - {x: -26, y: 121.5}
+    - name: Strains_11
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 0
+        width: 261
+        height: 298
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 127.5, y: -149}
+        - {x: 130.5, y: -149}
+        - {x: 130.5, y: -138}
+        - {x: 127.5, y: -139}
+      - - {x: 104.5, y: 53}
+        - {x: 104.5, y: 29}
+        - {x: 104.5, y: 57}
+        - {x: 107.5, y: 59}
+        - {x: 114.5, y: 91}
+        - {x: 21.5, y: 149}
+        - {x: -34.5, y: 149}
+        - {x: -101.5, y: 86}
+        - {x: -101.5, y: 42}
+        - {x: -104.5, y: 57}
+        - {x: -109.5, y: 84}
+        - {x: -119.5, y: 88}
+        - {x: -121.5, y: 83}
+        - {x: -130.5, y: 62}
+        - {x: -130.5, y: -84}
+        - {x: -68.5, y: -110}
+        - {x: 101.5, y: -110}
+        - {x: 123.5, y: -73}
+        - {x: 123.5, y: 61}
+        - {x: 108.5, y: 59}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
