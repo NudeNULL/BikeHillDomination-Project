@@ -15,17 +15,14 @@ public class BicycleController : MonoBehaviour
 
     // Linear force applied to bicycle to maintain better balance and avoid back flips on pedaling
     public float horizontalForce;
-    public float xBackFlipAnchorDistance;
-    public float yBackFlipAnchorDistance;
+    public float xLeanAnchorDistance;
+    public float yLeanAnchorDistance;
     public float handsAngleOnFrontFlip;
     public float handsAngleOnBackFlip;
     public float forceToReachAngleOnFrontFlip;
     public float flipForce;
     public float flipAnchorSpeed;
     public float horizontalAxisLerpSpeed;
-
-    // Min/Max velocities that are used to set the pulling back distance of bicycler body
-    public float maxPullingBackVelocity;
 
     // Gear system
     public float[] gearsSpeed;
@@ -107,11 +104,6 @@ public class BicycleController : MonoBehaviour
             rigidBody2D.angularVelocity -= flipForce * horizontalAxis;
         }
 
-        if (!(rearWheelGrounded || frontWheelGrounded) && horizontalAxis == 0)
-        {
-            horizontalAxis = Mathf.Lerp(horizontalAxis, Mathf.Clamp(-rigidBody2D.velocity.y / maxPullingBackVelocity, -1, 0), Time.deltaTime * horizontalAxisLerpSpeed);
-        }
-
         // Front flip
         if (horizontalAxis > 0)
         {
@@ -144,8 +136,8 @@ public class BicycleController : MonoBehaviour
             bicyclerHingeJoint.anchor,
             new Vector2
             (
-                bicyclerHingeAnchorOrigin.x + xBackFlipAnchorDistance * Mathf.Clamp(horizontalAxis, -1f, 0f),
-                bicyclerHingeAnchorOrigin.y + yBackFlipAnchorDistance * Mathf.Clamp(horizontalAxis, -1f, 0f)
+                bicyclerHingeAnchorOrigin.x + xLeanAnchorDistance * Mathf.Clamp(horizontalAxis, -1f, 0f),
+                bicyclerHingeAnchorOrigin.y + yLeanAnchorDistance * Mathf.Clamp(horizontalAxis, -1f, 0f)
             ),
             Time.deltaTime * flipAnchorSpeed
         );
