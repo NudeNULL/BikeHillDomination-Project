@@ -18,9 +18,14 @@ public class BicycleController : MonoBehaviour
     public float xBackFlipAnchorDistance;
     public float yBackFlipAnchorDistance;
     public float handsAngleOnFrontFlip;
+    public float handsAngleOnBackFlip;
     public float forceToReachAngleOnFrontFlip;
     public float flipForce;
     public float flipAnchorSpeed;
+    public float horizontalAxisLerpSpeed;
+
+    // Min/Max velocities that are used to set the pulling back distance of bicycler body
+    public float maxPullingBackVelocity;
 
     // Gear system
     public float[] gearsSpeed;
@@ -54,7 +59,7 @@ public class BicycleController : MonoBehaviour
     // Current gear of bicycle
     public int currentGear;
 
-    // Used to change value of motor every frame;
+    // Used to change value of motor every frame
     JointMotor2D rearWheelJointMotor;
 
     // The gameobject own RigidBody2D
@@ -85,7 +90,7 @@ public class BicycleController : MonoBehaviour
         {
             // Get Axis
             verticalAxis = CrossPlatformInputManager.GetAxis("Vertical");
-            horizontalAxis = CrossPlatformInputManager.GetAxis("Horizontal");
+            horizontalAxis = CrossPlatformInputManager.GetAxisRaw("Horizontal");
 
             // Perform all processing on bike
             ProcessHorizontalAxis();
@@ -96,6 +101,17 @@ public class BicycleController : MonoBehaviour
 
     void ProcessHorizontalAxis()
     {
+        // Add angular velocity only if current velocity is not beyond limits
+        if (!(rigidBody2D.angularVelocity < -maxAngularVelocity && horizontalAxis > 0.0f || rigidBody2D.angularVelocity > maxAngularVelocity && horizontalAxis < 0.0f))
+        {
+            rigidBody2D.angularVelocity -= flipForce * horizontalAxis;
+        }
+
+        if (!(rearWheelGrounded || frontWheelGrounded) && horizontalAxis == 0)
+        {
+            horizontalAxis = Mathf.Lerp(horizontalAxis, Mathf.Clamp(-rigidBody2D.velocity.y / maxPullingBackVelocity, -1, 0), Time.deltaTime * horizontalAxisLerpSpeed);
+        }
+
         // Front flip
         if (horizontalAxis > 0)
         {
@@ -104,6 +120,14 @@ public class BicycleController : MonoBehaviour
 
             leftArmAngleReacher.maximumForce = forceToReachAngleOnFrontFlip * Mathf.Clamp(horizontalAxis, 0f, 1f);
             rightArmAngleReacher.maximumForce = forceToReachAngleOnFrontFlip * Mathf.Clamp(horizontalAxis, 0f, 1f);
+        }
+        else if (horizontalAxis < 0)
+        {
+            leftArmAngleReacher.angleToReach = handsAngleOnBackFlip;
+            rightArmAngleReacher.angleToReach = handsAngleOnBackFlip;
+
+            leftArmAngleReacher.maximumForce = forceToReachAngleOnFrontFlip * Mathf.Clamp(-horizontalAxis, 0f, 1f);
+            rightArmAngleReacher.maximumForce = forceToReachAngleOnFrontFlip * Mathf.Clamp(-horizontalAxis, 0f, 1f);
         }
         else
         {
@@ -125,24 +149,15 @@ public class BicycleController : MonoBehaviour
             ),
             Time.deltaTime * flipAnchorSpeed
         );
-
-        // Add angular velocity only if current velocity is not beyond limits
-        if (!(rigidBody2D.angularVelocity < -maxAngularVelocity && horizontalAxis > 0.0f || rigidBody2D.angularVelocity > maxAngularVelocity && horizontalAxis < 0.0f))
-        {
-            rigidBody2D.angularVelocity -= flipForce * horizontalAxis;
-        }
     }
 
     void ProcessVerticalAxis()
     {
         // Gas and brake processing
-        if (verticalAxis > 0.0f)
+        if (verticalAxis > 0.0f && rearWheelGrounded)
         {
             // Add linear (horizontal) force to bicycle to avoid falling back too often
-            if (rearWheelGrounded)
-            {
-                rigidBody2D.AddForce(new Vector2(verticalAxis * horizontalForce, 0));
-            }
+            rigidBody2D.AddForce(new Vector2(verticalAxis * horizontalForce, 0));
 
             rearWheelJointMotor.motorSpeed = -motorSpeed;
             rearWheelJointMotor.maxMotorTorque = motorForce * verticalAxis;
