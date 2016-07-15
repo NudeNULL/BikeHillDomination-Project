@@ -5,24 +5,23 @@ public class BicycleController : MonoBehaviour
 {
     public WheelJoint2D rearWheelJoint;
 
-    // The joint that connects bicycler body with bicycle
-    public HingeJoint2D bicyclerHingeJoint;
-
     public Rigidbody2D rearWheelRigidBody;
+
+    // Spring joint used to pull back the bicycler
+    public SpringJoint2D leanBackSpring;
+
+    // Spring joint used to pull forward the bicycler
+    public SpringJoint2D leanForwardSpring;
 
     [Range(0, 2000)]
     public float motorForceOnBrake;
 
     // Linear force applied to bicycle to maintain better balance and avoid back flips on pedaling
     public float horizontalForce;
-    public float xLeanAnchorDistance;
-    public float yLeanAnchorDistance;
-    public float handsAngleOnFrontFlip;
-    public float handsAngleOnBackFlip;
-    public float forceToReachAngleOnFrontFlip;
     public float flipForce;
     public float flipAnchorSpeed;
-    public float horizontalAxisLerpSpeed;
+    public float leanBackFrequency;
+    public float leanForwardDistance;
 
     // Gear system
     public float[] gearsSpeed;
@@ -38,20 +37,12 @@ public class BicycleController : MonoBehaviour
     float verticalAxis;
     float horizontalAxis;
 
-    // Anchor position before doing any flips, used to reset the body postion to its origin
-    Vector2 bicyclerHingeAnchorOrigin;
+    float leanForwardDefaultDistance;
+    float leanBackDefaultFrequency;
 
     // True if specific wheel is touching ground
     public bool rearWheelGrounded;
     public bool frontWheelGrounded;
-
-    // Scripts that controls the hinge joints between arm and upper arm
-    public AngleReacher leftArmAngleReacher;
-    public AngleReacher rightArmAngleReacher;
-
-    // Used to store the last value before changing it
-    float saveAngle;
-    float saveForce;
 
     // Current gear of bicycle
     public int currentGear;
@@ -70,14 +61,14 @@ public class BicycleController : MonoBehaviour
     {
         rigidBody2D = GetComponent<Rigidbody2D>();
         rearWheelJointMotor = rearWheelJoint.motor;
-        bicyclerHingeAnchorOrigin = bicyclerHingeJoint.anchor;
-        saveAngle = leftArmAngleReacher.angleToReach;
-        saveForce = leftArmAngleReacher.maximumForce;
 
         // Configure motor force and motor speed;
         currentGear = 1;
         motorForce = gearsForce[currentGear];
         motorSpeed = gearsSpeed[currentGear];
+
+        leanBackDefaultFrequency = leanBackSpring.frequency;
+        leanForwardDefaultDistance = leanForwardSpring.distance;
     }
 
     // Update is called once per frame
@@ -87,7 +78,7 @@ public class BicycleController : MonoBehaviour
         {
             // Get Axis
             verticalAxis = CrossPlatformInputManager.GetAxis("Vertical");
-            horizontalAxis = CrossPlatformInputManager.GetAxisRaw("Horizontal");
+            horizontalAxis = CrossPlatformInputManager.GetAxis("Horizontal");
 
             // Perform all processing on bike
             ProcessHorizontalAxis();
@@ -104,43 +95,33 @@ public class BicycleController : MonoBehaviour
             rigidBody2D.angularVelocity -= flipForce * horizontalAxis;
         }
 
-        // Front flip
+        // Lean processing
         if (horizontalAxis > 0)
         {
-            leftArmAngleReacher.angleToReach = handsAngleOnFrontFlip;
-            rightArmAngleReacher.angleToReach = handsAngleOnFrontFlip;
+            if (leanBackSpring.enabled)
+            {
+                leanBackSpring.frequency = leanBackDefaultFrequency;
+                leanBackSpring.enabled = false;
+            }
 
-            leftArmAngleReacher.maximumForce = forceToReachAngleOnFrontFlip * Mathf.Clamp(horizontalAxis, 0f, 1f);
-            rightArmAngleReacher.maximumForce = forceToReachAngleOnFrontFlip * Mathf.Clamp(horizontalAxis, 0f, 1f);
+            leanForwardSpring.distance = leanForwardDefaultDistance + leanForwardDistance * horizontalAxis;
         }
         else if (horizontalAxis < 0)
         {
-            leftArmAngleReacher.angleToReach = handsAngleOnBackFlip;
-            rightArmAngleReacher.angleToReach = handsAngleOnBackFlip;
-
-            leftArmAngleReacher.maximumForce = forceToReachAngleOnFrontFlip * Mathf.Clamp(-horizontalAxis, 0f, 1f);
-            rightArmAngleReacher.maximumForce = forceToReachAngleOnFrontFlip * Mathf.Clamp(-horizontalAxis, 0f, 1f);
+            leanBackSpring.enabled = true;
+            leanBackSpring.frequency = leanBackDefaultFrequency + leanBackFrequency * -horizontalAxis;
+            leanForwardSpring.distance = leanForwardDefaultDistance;
         }
         else
         {
-            leftArmAngleReacher.angleToReach = saveAngle;
-            rightArmAngleReacher.angleToReach = saveAngle;
+            if (leanBackSpring.enabled)
+            {
+                leanBackSpring.frequency = leanBackDefaultFrequency;
+                leanBackSpring.enabled = false;
+            }
 
-            leftArmAngleReacher.maximumForce = saveForce;
-            rightArmAngleReacher.maximumForce = saveForce;
+            leanForwardSpring.distance = leanForwardDefaultDistance;
         }
-
-        // Back flip
-        bicyclerHingeJoint.anchor = Vector2.Lerp
-        (
-            bicyclerHingeJoint.anchor,
-            new Vector2
-            (
-                bicyclerHingeAnchorOrigin.x + xLeanAnchorDistance * Mathf.Clamp(horizontalAxis, -1f, 0f),
-                bicyclerHingeAnchorOrigin.y + yLeanAnchorDistance * Mathf.Clamp(horizontalAxis, -1f, 0f)
-            ),
-            Time.deltaTime * flipAnchorSpeed
-        );
     }
 
     void ProcessVerticalAxis()

@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
     public CameraFollow mainCamera;
 
     // Joints that connects bicycler with bicycle which will be disabled on crash
-    public HingeJoint2D[] jointsToDisable;
+    public Joint2D[] jointsToDisable;
 
     // Biker body rigidbodies which masses are changed on crash impact to simulate more realistic fall
     Rigidbody2D[] bicyclerRigidBodies;
