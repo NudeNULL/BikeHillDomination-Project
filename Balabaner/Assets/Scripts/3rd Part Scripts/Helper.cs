@@ -1,12 +1,20 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
 
-static class Helper
+public static class Helper
 {
-	public static void Parsie(this Vector3 v3, Vector2 v2)
+	public static List<GhostReplayManager.Transform> Parsie(this UnityEngine.Transform[] transforms)
 	{
-		v3.x = v2.x;
-		v3.y = v2.y;
-		v3.z = 0;
+		var list = new List<GhostReplayManager.Transform>(transforms.Length);
+		foreach (var transform in transforms)
+		{
+			list.Add(new GhostReplayManager.Transform()
+			{
+				position = transform.position,
+				zAxis = transform.eulerAngles.z
+			});
+		}
+
+		return list;
 	}
 }
 

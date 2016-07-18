@@ -8,4 +8,5 @@
     public const float MAXIMUM_WIND_VELOCITY = 170f;
     public const float UNBREAKABLE_FORCE = 99999f;
     public const float SLOWMO_SUSPENSION_FREQUENCY = 100F;
+    public const int FRAMES_DEFAULT_LIST_CAPACITY = 3600;
 }

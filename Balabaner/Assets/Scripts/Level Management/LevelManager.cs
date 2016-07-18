@@ -3,190 +3,195 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    // Pause Menu canvas
-    public Canvas PauseMenu;
+	// Replay Manager
+	GhostReplayManager GRM;
 
-    // Both Bicycle and Bicycler gameobjects parent
-    public GameObject bikeAndBikerParent;
-    public GameObject bicycler;
+	// Pause Menu canvas
+	public Canvas PauseMenu;
 
-    public CameraFollow mainCamera;
+	// Both Bicycle and Bicycler gameobjects parent
+	public GameObject player;
+	public GameObject bicycler;
 
-    // Joints that connects bicycler with bicycle which will be disabled on crash
-    public Joint2D[] jointsToDisable;
+	public CameraFollow mainCamera;
 
-    // Biker body rigidbodies which masses are changed on crash impact to simulate more realistic fall
-    Rigidbody2D[] bicyclerRigidBodies;
+	// Joints that connects bicycler with bicycle which will be disabled on crash
+	public Joint2D[] jointsToDisable;
 
-    // Wheels rigidbodies
-    public Rigidbody2D rearWheelRigidbody;
-    public Rigidbody2D frontWheelRigidbody;
+	// Biker body rigidbodies which masses are changed on crash impact to simulate more realistic fall
+	Rigidbody2D[] bicyclerRigidBodies;
 
-    public Rigidbody2D bicycleRigidBody;
+	// Wheels rigidbodies
+	public Rigidbody2D rearWheelRigidbody;
+	public Rigidbody2D frontWheelRigidbody;
 
-    // The joint that is allowed to break for rear wheel
-    public HingeJoint2D rearSuspensionToWheelJoint;
+	public Rigidbody2D bicycleRigidBody;
 
-    // Wheel joint
-    public WheelJoint2D rearWheel;
-    public WheelJoint2D frontWheel;
+	// The joint that is allowed to break for rear wheel
+	public HingeJoint2D rearSuspensionToWheelJoint;
 
-    // Angle reacher components which force is set to zero on impact
-    AngleReacher[] angleReachers;
+	// Wheel joint
+	public WheelJoint2D rearWheel;
+	public WheelJoint2D frontWheel;
 
-    JointSuspension2D tempSuspension;
+	// Angle reacher components which force is set to zero on impact
+	AngleReacher[] angleReachers;
 
-    // Delay time before performing automatic restart
-    public float restartDelay;
+	JointSuspension2D tempSuspension;
 
-    // Delay time before player can manually restart
-    public float beforeRestartDelay;
+	// Delay time before performing automatic restart
+	public float restartDelay;
 
-    // Mass for all body sprites after crash
-    public float bodyPartsMassesAfterImpact;
+	// Delay time before player can manually restart
+	public float beforeRestartDelay;
 
-    // Wheel mass after crash impact
-    public float wheelMassAfterImpact;
+	// Mass for all body sprites after crash
+	public float bodyPartsMassesAfterImpact;
 
-    // Bicycle mass after impact
-    public float bicycleMassAfterImpact;
+	// Wheel mass after crash impact
+	public float wheelMassAfterImpact;
 
-    float saveTimeScale;
+	// Bicycle mass after impact
+	public float bicycleMassAfterImpact;
 
-    public bool isCrashing;
+	float saveTimeScale;
 
-    public AudioManager audioManager;
+	public bool isCrashing;
 
-    // Use this for initialization
-    void Start()
-    {
-        angleReachers = bikeAndBikerParent.GetComponentsInChildren<AngleReacher>();
-        bicyclerRigidBodies = bicycler.GetComponentsInChildren<Rigidbody2D>();
-        ResetTime();
-    }
+	public AudioManager audioManager;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (isCrashing)
-        {
-            if (restartDelay <= 0f)
-            {
-                Restart();
-            }
-            else
-            {
-                if (beforeRestartDelay > 0f)
-                {
-                    beforeRestartDelay -= Time.deltaTime;
-                }
-                else
-                {
-                    if (Input.anyKeyDown && !Input.GetButtonDown("Cancel"))
-                    {
-                        restartDelay = 0f;
-                    }
-                    else
-                    {
-                        restartDelay -= Time.deltaTime;
-                    }
-                }
-            }
-        }
+	// Use this for initialization
+	void Start()
+	{
+		GRM = FindObjectOfType<GhostReplayManager>();
+		angleReachers = player.GetComponentsInChildren<AngleReacher>();
+		bicyclerRigidBodies = bicycler.GetComponentsInChildren<Rigidbody2D>();
+		ResetTime();
+	}
 
-        // Pause Game
-        if (Input.GetButtonDown("Cancel"))
-        {
-            if (PauseMenu.enabled)
-            {
-                Time.timeScale = saveTimeScale;
-                PauseMenu.enabled = false;
-            }
-            else
-            {
-                saveTimeScale = Time.timeScale;
-                Time.timeScale = 0f;
-                PauseMenu.enabled = true;
-            }
-        }
-    }
-    public void BeforeRestart()
-    {
-        // Return in case if player is already crashing
-        if (isCrashing)
-        {
-            return;
-        }
+	// Update is called once per frame
+	void Update()
+	{
+		if (isCrashing)
+		{
+			if (restartDelay <= 0f)
+			{
+				Restart();
+			}
+			else
+			{
+				if (beforeRestartDelay > 0f)
+				{
+					beforeRestartDelay -= Time.deltaTime;
+				}
+				else
+				{
+					if (Input.anyKeyDown && !Input.GetButtonDown("Cancel"))
+					{
+						restartDelay = 0f;
+					}
+					else
+					{
+						restartDelay -= Time.deltaTime;
+					}
+				}
+			}
+		}
 
-        isCrashing = true;
+		// Pause Game
+		if (Input.GetButtonDown("Cancel"))
+		{
+			if (PauseMenu.enabled)
+			{
+				Time.timeScale = saveTimeScale;
+				PauseMenu.enabled = false;
+			}
+			else
+			{
+				saveTimeScale = Time.timeScale;
+				Time.timeScale = 0f;
+				PauseMenu.enabled = true;
+			}
+		}
+	}
+	public void BeforeRestart()
+	{
+		// Return in case if player is already crashing
+		if (isCrashing)
+		{
+			return;
+		}
 
-        // Turn on slow-mo
-        Time.timeScale = Constants.SLOWMO_TIME_SCALE;
-        Time.fixedDeltaTime = Constants.SLOWMO_FIXED_DELTA_TIME;
+		isCrashing = true;
 
-        // Speed up camera and change the position to focus on slow-mo
-        mainCamera.distanceFollowSpeed = 25f;
-        mainCamera.xOffset = -10f;
-        mainCamera.yOffset = 0.0f;
+		// Turn on slow-mo
+		Time.timeScale = Constants.SLOWMO_TIME_SCALE;
+		Time.fixedDeltaTime = Constants.SLOWMO_FIXED_DELTA_TIME;
 
-        // Disable motor if wheel joint is enabled
-        if (rearSuspensionToWheelJoint != null)
-        {
-            rearSuspensionToWheelJoint.breakForce = Constants.UNBREAKABLE_FORCE;
-            rearWheel.useMotor = false;
-        }
+		// Speed up camera and change the position to focus on slow-mo
+		mainCamera.distanceFollowSpeed = 25f;
+		mainCamera.xOffset = -10f;
+		mainCamera.yOffset = 0.0f;
 
-        // Turn off the controller
-        bikeAndBikerParent.GetComponentInChildren<BicycleController>().enabled = false;
+		// Disable motor if wheel joint is enabled
+		if (rearSuspensionToWheelJoint != null)
+		{
+			rearSuspensionToWheelJoint.breakForce = Constants.UNBREAKABLE_FORCE;
+			rearWheel.useMotor = false;
+		}
 
-        // Disable joints that connects bicycler with bicycle
-        for (int i = 0; i < jointsToDisable.Length; i++)
-        {
-            jointsToDisable[i].enabled = false;
-        }
+		// Turn off the controller
+		player.GetComponentInChildren<BicycleController>().enabled = false;
 
-        // Disable Angle Reacher force for all objects
-        for (int i = 0; i < angleReachers.Length; i++)
-        {
-            angleReachers[i].maximumForce = 0f;
-        }
+		// Disable joints that connects bicycler with bicycle
+		for (int i = 0; i < jointsToDisable.Length; i++)
+		{
+			jointsToDisable[i].enabled = false;
+		}
 
-        // Change mass of the bicycler body parts
-        for (int i = 0; i < bicyclerRigidBodies.Length; i++)
-        {
-            bicyclerRigidBodies[i].mass = bodyPartsMassesAfterImpact;
-        }
+		// Disable Angle Reacher force for all objects
+		for (int i = 0; i < angleReachers.Length; i++)
+		{
+			angleReachers[i].maximumForce = 0f;
+		}
 
-        rearWheelRigidbody.mass = wheelMassAfterImpact;
-        frontWheelRigidbody.mass = wheelMassAfterImpact;
-        bicycleRigidBody.mass = bicycleMassAfterImpact;
+		// Change mass of the bicycler body parts
+		for (int i = 0; i < bicyclerRigidBodies.Length; i++)
+		{
+			bicyclerRigidBodies[i].mass = bodyPartsMassesAfterImpact;
+		}
 
-        // Asign new suspension
-        if (frontWheel != null)
-        {
-            tempSuspension = frontWheel.suspension;
-            tempSuspension.frequency = Constants.SLOWMO_SUSPENSION_FREQUENCY;
-            frontWheel.suspension = tempSuspension;
-            frontWheel.breakForce = Constants.UNBREAKABLE_FORCE;
-        }
+		rearWheelRigidbody.mass = wheelMassAfterImpact;
+		frontWheelRigidbody.mass = wheelMassAfterImpact;
+		bicycleRigidBody.mass = bicycleMassAfterImpact;
 
-        // Change pitch so slow motion sounds real
-        audioManager.SetSlowMotionPitch();
-    }
+		// Asign new suspension
+		if (frontWheel != null)
+		{
+			tempSuspension = frontWheel.suspension;
+			tempSuspension.frequency = Constants.SLOWMO_SUSPENSION_FREQUENCY;
+			frontWheel.suspension = tempSuspension;
+			frontWheel.breakForce = Constants.UNBREAKABLE_FORCE;
+		}
 
-    public void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+		// Change pitch so slow motion sounds real
+		audioManager.SetSlowMotionPitch();
+	}
 
-    public void GoToMenu()
-    {
-        SceneManager.LoadScene(0);
-    }
+	public void Restart()
+	{
+		GRM.RemoveFramesTail();
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+	}
 
-    public void ResetTime()
-    {
-        Time.timeScale = Constants.NORMAL_TIME_SCALE;
-        Time.fixedDeltaTime = Constants.NORMAL_FIXED_DELTA_TIME;
-    }
+	public void GoToMenu()
+	{
+		SceneManager.LoadScene(0);
+	}
+
+	public void ResetTime()
+	{
+		Time.timeScale = Constants.NORMAL_TIME_SCALE;
+		Time.fixedDeltaTime = Constants.NORMAL_FIXED_DELTA_TIME;
+	}
 }
